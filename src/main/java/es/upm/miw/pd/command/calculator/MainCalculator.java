@@ -14,6 +14,8 @@ public class MainCalculator {
         this.commandManager.add(new ResetCommand(calculator));
         this.commandManager.add(new PrintCommand(calculator));
         this.commandManager.add(new ComandoGuardar(calculator, gm));
+        this.commandManager.add(new ComandoDeshacer(calculator, gm));
+
 
     }
 
