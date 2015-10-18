@@ -1,7 +1,7 @@
 package es.upm.miw.pd.command.calculator;
 
 public interface CalculadoraMementable<T> {
-    T createMemento();
+    MementoCalculadora createMemento();
 
     void restoreMemento(T memento);
 
