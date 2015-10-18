@@ -2,18 +2,14 @@ package es.upm.miw.pd.text;
 
 public class Texto extends CompositeDocument {
 
+    private String endLineFeed = "---o---";
     @Override
     public String dibujar(Boolean formatMayusculas) {
         // TODO Auto-generated method stub
         return super.dibujar(formatMayusculas);
     }
 
-    @Override
-    protected String printEndLineFeed() {
-        // TODO Auto-generated method stub
-        return "---o---";
-    }
-
+   
     @Override
     public void add(Componente componente) {
         // TODO Auto-generated method stub

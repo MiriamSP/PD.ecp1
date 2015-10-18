@@ -22,7 +22,6 @@ public class ComandoGuardar extends OrderComando {
 
     @Override
     public String name() {
-        // TODO Auto-generated method stub
         return "guardar";
     }
 
