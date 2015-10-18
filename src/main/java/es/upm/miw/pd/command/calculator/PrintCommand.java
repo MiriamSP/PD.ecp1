@@ -12,6 +12,7 @@ public class PrintCommand extends OrderComando{
     @Override
     public void execute() {
         // TODO Auto-generated method stub
+        IO.getIO().clear();
         IO.getIO().print(calculator.getTotal());
         }
 
