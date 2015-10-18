@@ -1,9 +1,9 @@
 package es.upm.miw.pd.visitor;
 
-public class Visitor1 extends Visitor {
+public class Visitor2 extends Visitor {
     private int contA, contB;
 
-    public Visitor1() {
+    public Visitor2() {
         super();
         this.contA = 0;
         this.contB = 0;
@@ -12,13 +12,15 @@ public class Visitor1 extends Visitor {
     @Override
     public void visitElementA(ElementA e) {
         System.out.println("Visitador 1 --> elemento: " + e.getAttributeA());
+        this.setContA(this.contA++);
     }
 
     @Override
     public void visitElementB(ElementB e) {
         System.out.println("Visitador 1 --> elemento: " + e.getAttributeB());
+        this.setContB(this.contB++);
     }
-    
+
     public int getAs() {
         return contA;
     }
@@ -34,6 +36,5 @@ public class Visitor1 extends Visitor {
     public void setContB(int contB) {
         this.contB = contB;
     }
-
 
 }
