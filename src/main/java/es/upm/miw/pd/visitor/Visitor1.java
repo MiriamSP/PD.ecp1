@@ -12,13 +12,17 @@ public class Visitor1 extends Visitor {
     @Override
     public void visitElementA(ElementA e) {
         System.out.println("Visitador 1 --> elemento: " + e.getAttributeA());
+        this.setContA(this.contA + 1);
+
     }
 
     @Override
     public void visitElementB(ElementB e) {
         System.out.println("Visitador 1 --> elemento: " + e.getAttributeB());
+        this.setContB(this.contB + 1);
+
     }
-    
+
     public int getAs() {
         return contA;
     }
@@ -34,6 +38,5 @@ public class Visitor1 extends Visitor {
     public void setContB(int contB) {
         this.contB = contB;
     }
-
 
 }
