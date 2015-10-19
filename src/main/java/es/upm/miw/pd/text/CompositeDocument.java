@@ -4,12 +4,15 @@ import java.util.ArrayList;
 
 public abstract class CompositeDocument extends Componente {
 
-    protected ArrayList<Componente> componentes;
     private String endLineFeed;
 
-    public CompositeDocument() {
-        componentes = new ArrayList<Componente>();
+    
+    
+   public CompositeDocument(ArrayList<Componente> componentes, String endLineFeed) {
+        super(componentes);
+        this.endLineFeed = endLineFeed;
     }
+
 
     @Override
     public String dibujar(Boolean formatMayusculas) {

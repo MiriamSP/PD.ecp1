@@ -20,7 +20,12 @@ public class Parrafo extends CompositeDocument {
     @Override
     public void add(Componente componente) {
         // TODO Auto-generated method stub
-        componentes.add(componente);
+        if (isComposite()){
+            componentes.add(componente);
+        } else
+            throw  new UnsupportedOperationException();
+  
+       
     }
 
     @Override
