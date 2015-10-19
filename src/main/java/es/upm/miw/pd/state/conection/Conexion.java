@@ -6,13 +6,13 @@ public final class Conexion implements Link {
 
     private int respuesta;
     
-    
+    private Link link;
 
     private ConexionState conexionState;
 
-    public Conexion(LinkMock link) {
+    public Conexion(Link link) {
         super();
-        this.conexionState = link;
+        this.link = link;
     }
 
     public ConexionState getConexionState() {
