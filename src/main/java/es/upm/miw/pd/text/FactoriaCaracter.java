@@ -4,15 +4,16 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class FactoriaCaracter {
-    private Map<String, Integer> references;
+    // private Map<String, Integer> references;
+    private Map<String, Caracter> references;
 
-    private int reference;
+    private Caracter reference;
 
     private static FactoriaCaracter referencesFactory = null;
 
     public FactoriaCaracter() {
         this.references = new HashMap<>();
-        this.reference = 0;
+        this.reference = null;
     }
 
     public static FactoriaCaracter getFactoria() {
@@ -22,18 +23,27 @@ public class FactoriaCaracter {
         return referencesFactory;
     }
 
-    public int getReference(String key) {
-        Integer result = this.references.get(key);
+    /*
+     * public Caracter getReference(String key) { Caracter result = this.references.get(key); if (result == null) { this.references.put(key,
+     * this.reference); result = this.reference; reference++; } return result; }
+     */
+
+    /*
+     * public int get(String key) { Integer result = this.references.get(key); if (result == null) { this.references.put(key,
+     * this.reference); result = this.reference; reference++; } return result; }
+     */
+
+    public Caracter get(String key) {
+        Caracter result = this.references.get(key);
         if (result == null) {
             this.references.put(key, this.reference);
             result = this.reference;
-            reference++;
         }
         return result;
     }
 
-    public void removeReference(String key) {
-        this.references.remove(key);
-    }
+    // public void removeReference(String key) {
+    // this.references.remove(key);
+    // }
 
 }

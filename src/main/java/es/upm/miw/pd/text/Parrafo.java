@@ -2,18 +2,20 @@ package es.upm.miw.pd.text;
 
 public class Parrafo extends CompositeDocument {
 
+    private String endLineFeed = "\n";
     @Override
     public String dibujar(Boolean formatMayusculas) {
         // TODO Auto-generated method stub
         return super.dibujar(formatMayusculas);
     }
 
-    @Override
-    protected String printEndLineFeed() {
-        // TODO Auto-generated method stub
-        return "\n";
+   
 
+    public String getEndLineFeed() {
+        return endLineFeed;
     }
+
+
 
     @Override
     public void add(Componente componente) {
