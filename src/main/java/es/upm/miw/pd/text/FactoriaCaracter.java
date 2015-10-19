@@ -33,10 +33,12 @@ public class FactoriaCaracter {
      * this.reference); result = this.reference; reference++; } return result; }
      */
 
-    public Caracter get(String key) {
-        Caracter result = this.references.get(key);
+    public Caracter get(char key) {
+        Character aux;
+        aux = (Character)key;
+        Caracter result = this.references.get(aux);
         if (result == null) {
-            this.references.put(key, this.reference);
+            this.references.put(aux.toString(), this.reference);
             result = this.reference;
         }
         return result;
