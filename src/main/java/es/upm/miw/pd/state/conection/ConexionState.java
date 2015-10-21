@@ -3,37 +3,38 @@ package es.upm.miw.pd.state.conection;
 public abstract class ConexionState {
   
 
-    protected Conexion conexion;
-
+    protected Estado estado;
     public String msjExcepcion = "[ERROR] Usupported Operation";
 
-    public ConexionState(Conexion conexion) {
-        this.conexion = conexion;
+    public ConexionState(Estado estado) {
+        this.estado = estado;
     }
-    public void abrir() throws UnsupportedOperationException {
+    public void abrir(Conexion conexion) throws UnsupportedOperationException {
         throw new UnsupportedOperationException(msjExcepcion);
     }
 
-    public void cerrar() throws UnsupportedOperationException {
+    public void cerrar(Conexion conexion) throws UnsupportedOperationException {
         throw new UnsupportedOperationException(msjExcepcion);
     }
 
-    public void parar() throws UnsupportedOperationException {
+    public void parar(Conexion conexion) throws UnsupportedOperationException {
         throw new UnsupportedOperationException(msjExcepcion);
     }
 
-    public void iniciar() throws UnsupportedOperationException {
+    public void iniciar(Conexion conexion) throws UnsupportedOperationException {
         throw new UnsupportedOperationException(msjExcepcion);
     }
 
-    public void enviar(String msg) throws UnsupportedOperationException {
+    public void enviar(Conexion conexion, String msg) throws UnsupportedOperationException {
         throw new UnsupportedOperationException(msjExcepcion);
     }
 
-    public void recibir(int respuesta) throws UnsupportedOperationException {
+    public void recibir(Conexion conexion, int respuesta) throws UnsupportedOperationException {
         throw new UnsupportedOperationException(msjExcepcion);
     }
 
-    public abstract Estado getEstado();   
+    public  Estado getEstado(){
+    return this.estado;   
+    };
 
 }
