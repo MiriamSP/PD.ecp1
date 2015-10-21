@@ -1,6 +1,5 @@
 package es.upm.miw.pd.state.conection;
 
-import pd.ecp1.state.Conexion;
 
 public class Preparado extends ConexionState {
 
@@ -8,7 +7,7 @@ public class Preparado extends ConexionState {
     // Acciones: Iniciar, Abrir, Enviar, Cerrar, Parar
 
     public Preparado() {
-        super(estado.PREPARADO);
+        super(Estado.PREPARADO);
         // TODO Auto-generated constructor stub
     }
 
@@ -34,7 +33,7 @@ public class Preparado extends ConexionState {
     }
 
     @Override
-    public void iniciar() throws UnsupportedOperationException {
+    public void iniciar(Conexion conexion) throws UnsupportedOperationException {
         // TODO Auto-generated method stub
         conexion.setConexionState(new Preparado());
     }
@@ -42,6 +41,7 @@ public class Preparado extends ConexionState {
     @Override
     public void enviar(Conexion conexion, String msg) throws UnsupportedOperationException {
         // TODO Auto-generated method stub
+        conexion.getLink().enviar(msg);
         conexion.setConexionState(new Preparado());
     }
 
