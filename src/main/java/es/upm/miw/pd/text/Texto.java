@@ -6,8 +6,7 @@ public class Texto extends CompositeDocument {
 
     public Texto() {
         super();
-
-            composite = true;
+        composite = true;
     }
     /*
      * public Texto() { //super(componentes, endLineFeed); // TODO Auto-generated constructor stub }
@@ -33,7 +32,7 @@ public class Texto extends CompositeDocument {
         if (componente != null) {
             if (componente.isComposite()) {
                 componentes.add(componente);
-            }
+            } else
             throw new UnsupportedOperationException();
         }
     }
