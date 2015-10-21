@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public abstract class Componente {
 
     protected boolean composite;
-
    
     public abstract String dibujar(Boolean formatMayusculas);
 
