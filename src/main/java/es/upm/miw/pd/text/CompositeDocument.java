@@ -4,19 +4,15 @@ import java.util.ArrayList;
 
 public abstract class CompositeDocument extends Componente {
 
-    private static String endLineFeed;
+    public String endLineFeed;
 
-     public ArrayList<Componente> componentes; 
-    
-   public CompositeDocument() {
-       // super(componentes);
-    //    this.endLineFeed = endLineFeed;
-       if (componentes == null)
-       {
-           componentes = new ArrayList<Componente>();
-       }
+    public ArrayList<Componente> componentes;
+
+    public CompositeDocument() {
+        if (componentes == null) {
+            componentes = new ArrayList<Componente>();
+        }
     }
-
 
     @Override
     public String dibujar(Boolean formatMayusculas) {
@@ -24,13 +20,6 @@ public abstract class CompositeDocument extends Componente {
         for (Componente componente : componentes) {
             text += componente.dibujar(formatMayusculas);
         }
-        return text + getEndLineFeed();
+        return text + endLineFeed;
     }
-
-    private String getEndLineFeed() {
-        // TODO Auto-generated method stub
-        return endLineFeed;
-    }
-
-
 }

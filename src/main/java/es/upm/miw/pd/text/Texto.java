@@ -7,12 +7,9 @@ public class Texto extends CompositeDocument {
     public Texto() {
         super();
         composite = true;
+        endLineFeed = "---o---\n";
     }
-    /*
-     * public Texto() { //super(componentes, endLineFeed); // TODO Auto-generated constructor stub }
-     */
-
-    private static String endLineFeed = "---o---";
+    
 
     @Override
     public String dibujar(Boolean formatMayusculas) {
@@ -33,7 +30,7 @@ public class Texto extends CompositeDocument {
             if (componente.isComposite()) {
                 componentes.add(componente);
             } else
-            throw new UnsupportedOperationException();
+                throw new UnsupportedOperationException();
         }
     }
 
@@ -41,9 +38,4 @@ public class Texto extends CompositeDocument {
     public boolean isComposite() {
         return true;
     }
-
-    public String getEndLineFeed() {
-        return endLineFeed;
-    }
-
 }

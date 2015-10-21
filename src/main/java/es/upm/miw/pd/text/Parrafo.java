@@ -7,23 +7,16 @@ public class Parrafo extends CompositeDocument {
     public Parrafo() {
         super();
         composite = false;
+        endLineFeed = "\n";
     }
 
-    /*
-     * public Parrafo() { //super(componentes,endLineFeed); // TODO Auto-nerated constructor stub }
-     */
-
-    private static String endLineFeed = "\n";
-
+  
     @Override
     public String dibujar(Boolean formatMayusculas) {
         // TODO Auto-generated method stub
         return super.dibujar(formatMayusculas);
     }
-
-    public String getEndLineFeed() {
-        return endLineFeed;
-    }
+   
 
     @Override
     public void add(Componente componente) {
