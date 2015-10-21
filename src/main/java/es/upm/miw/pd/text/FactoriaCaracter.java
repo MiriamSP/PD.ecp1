@@ -23,26 +23,19 @@ public class FactoriaCaracter {
         return referencesFactory;
     }
 
-    /*
-     * public Caracter getReference(String key) { Caracter result = this.references.get(key); if (result == null) { this.references.put(key,
-     * this.reference); result = this.reference; reference++; } return result; }
-     */
-
-    /*
-     * public int get(String key) { Integer result = this.references.get(key); if (result == null) { this.references.put(key,
-     * this.reference); result = this.reference; reference++; } return result; }
-     */
-
-    public Caracter get(char key) {
-        Character aux;
-        aux = (Character)key;
-        Caracter result = this.references.get(aux);
-        if (result == null) {
-            this.references.put(aux.toString(), this.reference);
-            result = this.reference;
+       
+    public Caracter get (char key){
+        if (references.containsKey(key)){
+            return references.get(key);
+        }else {
+            // construcción perezosa
+            Caracter pl = new Caracter(key);
+            Character sKey = (Character)key;
+            references.put(sKey.toString(), pl);
+            return pl;
         }
-        return result;
     }
+    
 
     // public void removeReference(String key) {
     // this.references.remove(key);

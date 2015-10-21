@@ -4,14 +4,9 @@ import java.util.ArrayList;
 
 public abstract class Componente {
 
-    protected   ArrayList<Componente> componentes;
-
-    public Componente() {
-        componentes = new ArrayList<>();
-    }
+    protected boolean composite;
 
    
-
     public abstract String dibujar(Boolean formatMayusculas);
 
     public abstract void add(Componente componente);

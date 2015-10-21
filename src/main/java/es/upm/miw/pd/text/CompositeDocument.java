@@ -6,11 +6,15 @@ public abstract class CompositeDocument extends Componente {
 
     private static String endLineFeed;
 
-    
+     public ArrayList<Componente> componentes; 
     
    public CompositeDocument() {
        // super(componentes);
-        this.endLineFeed = endLineFeed;
+    //    this.endLineFeed = endLineFeed;
+       if (componentes == null)
+       {
+           componentes = new ArrayList<Componente>();
+       }
     }
 
 

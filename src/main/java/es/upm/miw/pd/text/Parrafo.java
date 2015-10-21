@@ -5,7 +5,9 @@ import java.util.ArrayList;
 public class Parrafo extends CompositeDocument {
 
    public Parrafo() {
-    
+       super();
+
+    composite = false;
         // TODO Auto-generated constructor stub
     }
 
