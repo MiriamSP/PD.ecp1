@@ -42,7 +42,7 @@ public class Preparado extends ConexionState {
     public void enviar(Conexion conexion, String msg) throws UnsupportedOperationException {
         // TODO Auto-generated method stub
         conexion.getLink().enviar(msg);
-        conexion.setConexionState(new Preparado());
+        conexion.setConexionState(new Esperando());
     }
 
     @Override

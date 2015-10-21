@@ -12,7 +12,7 @@ public class Parado extends ConexionState{
     @Override
     public void parar(Conexion conexion) throws UnsupportedOperationException {
         // TODO Auto-generated method stub
-        conexion.setConexionState(new Cerrado());
+        conexion.setConexionState(new Parado());
     }
 
     @Override

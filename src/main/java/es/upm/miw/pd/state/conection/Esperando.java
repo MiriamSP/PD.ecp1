@@ -13,7 +13,12 @@ public class Esperando extends ConexionState {
     public void recibir(Conexion conexion, int respuesta) throws UnsupportedOperationException {
         // TODO Auto-generated method stub
         conexion.getLink().recibir(respuesta);  
-        conexion.setConexionState(new Preparado());
+        if (respuesta > 0 ){
+            conexion.setConexionState(new Cerrado());
+        } else if (respuesta == 0){
+            conexion.setConexionState(new Preparado());
+        }
+       
     }
     @Override
     public Estado getEstado() {
