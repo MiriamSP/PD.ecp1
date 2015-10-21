@@ -11,7 +11,9 @@ public final class Conexion {
     private ConexionState conexionState;
 
     public Conexion(Link link) {
+                     
         this.setLink(link);
+        conexionState = new Cerrado();
     }
 
     public ConexionState getConexionState() {

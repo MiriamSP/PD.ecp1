@@ -4,8 +4,9 @@ package es.upm.miw.pd.state.conection;
 public class Cerrado extends ConexionState {
 
     public Cerrado() {
-        super(Estado.CERRADO);
+        //super(this.setEstado(Estado.CERRADO));
         // TODO Auto-generated constructor stub
+        super(Estado.CERRADO);
     }
 
     @Override
@@ -22,12 +23,12 @@ public class Cerrado extends ConexionState {
 
     @Override
     public Estado getEstado() {
-        // TODO Auto-generated method stub
-        return estado.CERRADO;
+      
+        return Estado.CERRADO;
     }
+}
 
     
 
    
 
-}

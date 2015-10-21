@@ -3,7 +3,7 @@ package es.upm.miw.pd.state.conection;
 public abstract class ConexionState {
   
 
-    protected Estado estado;
+    private Estado estado;
     public String msjExcepcion = "[ERROR] Usupported Operation";
 
     public ConexionState(Estado estado) {
@@ -36,5 +36,11 @@ public abstract class ConexionState {
     public  Estado getEstado(){
     return this.estado;   
     };
+    
+    public  void setEstado(Estado estado){
+         this.estado = estado;   
+        };
+    
+    
 
 }
