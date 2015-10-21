@@ -41,5 +41,4 @@ public abstract class ConexionState {
     public void setEstado(Estado estado) {
         this.estado = estado;
     };
-
 }

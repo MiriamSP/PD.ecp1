@@ -59,5 +59,4 @@ public final class Conexion {
     public Estado getEstado() {
         return this.conexionState.getEstado();
     }
-
 }

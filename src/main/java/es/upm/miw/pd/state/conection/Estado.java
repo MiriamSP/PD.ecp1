@@ -1,5 +1,5 @@
 package es.upm.miw.pd.state.conection;
 
 public enum Estado {
-    PREPARADO, CERRADO, PARADO, ESPERANDO, ABIERTO
+    PREPARADO, CERRADO, PARADO, ESPERANDO
 }
