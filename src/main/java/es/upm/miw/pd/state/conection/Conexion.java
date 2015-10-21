@@ -19,6 +19,7 @@ public final class Conexion {
 
     public void setConexionState(ConexionState conexionState) {
         this.conexionState = conexionState;
+
     }
 
     public void enviar(String msg) {
@@ -56,8 +57,7 @@ public final class Conexion {
     }
 
     public Estado getEstado() {
-        // TODO Auto-generated method stub
-        return this.getEstado();
+        return this.conexionState.getEstado();
     }
 
 }
