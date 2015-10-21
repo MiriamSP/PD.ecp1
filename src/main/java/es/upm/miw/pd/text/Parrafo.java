@@ -1,8 +1,20 @@
 package es.upm.miw.pd.text;
 
+import java.util.ArrayList;
+
 public class Parrafo extends CompositeDocument {
 
-    private String endLineFeed = "\n";
+   public Parrafo() {
+    
+        // TODO Auto-generated constructor stub
+    }
+
+/* public Parrafo() {
+        //super(componentes,endLineFeed);
+        // TODO Auto-nerated constructor stub
+    }*/
+
+    private static String endLineFeed = "\n";
     @Override
     public String dibujar(Boolean formatMayusculas) {
         // TODO Auto-generated method stub
@@ -20,11 +32,12 @@ public class Parrafo extends CompositeDocument {
     @Override
     public void add(Componente componente) {
         // TODO Auto-generated method stub
-        if (isComposite()){
+        if (componente != null){
+        if (!componente.isComposite()){
             componentes.add(componente);
         } else
             throw  new UnsupportedOperationException();
-  
+        }
        
     }
 

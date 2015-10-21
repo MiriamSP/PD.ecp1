@@ -1,7 +1,20 @@
 package es.upm.miw.pd.text;
 
+import java.util.ArrayList;
+
 public class Texto extends CompositeDocument {
-    private String endLineFeed ="---o---";
+    
+    public Texto(){
+    
+    }
+    /*public Texto() {
+        //super(componentes, endLineFeed);
+        // TODO Auto-generated constructor stub
+    }*/
+
+    
+
+    private static String endLineFeed ="---o---";
     @Override
     public String dibujar(Boolean formatMayusculas) {
         // TODO Auto-generated method stub
@@ -12,7 +25,10 @@ public class Texto extends CompositeDocument {
     @Override
     public void add(Componente componente) {
         // TODO Auto-generated method stub
-        componentes.add(componente);
+        if (!componente.isComposite()){
+            componentes.add(componente);
+
+        }           throw new UnsupportedOperationException();
     }
 
     @Override

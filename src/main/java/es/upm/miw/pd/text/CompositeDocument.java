@@ -4,12 +4,12 @@ import java.util.ArrayList;
 
 public abstract class CompositeDocument extends Componente {
 
-    private String endLineFeed;
+    private static String endLineFeed;
 
     
     
-   public CompositeDocument(ArrayList<Componente> componentes, String endLineFeed) {
-        super(componentes);
+   public CompositeDocument() {
+       // super(componentes);
         this.endLineFeed = endLineFeed;
     }
 
