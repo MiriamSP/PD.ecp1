@@ -48,7 +48,7 @@ public class Preparado extends ConexionState {
     @Override
     public Estado getEstado() {
         // TODO Auto-generated method stub
-        return Estado.CERRADO;
+        return Estado.PREPARADO;
     }
 
 }

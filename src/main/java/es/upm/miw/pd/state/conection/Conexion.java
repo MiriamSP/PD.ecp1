@@ -2,18 +2,15 @@ package es.upm.miw.pd.state.conection;
 
 public final class Conexion {
 
-    private String msg;
-
-    private int respuesta;
-
     private Link link;
 
     private ConexionState conexionState;
 
     public Conexion(Link link) {
-                     
-        this.setLink(link);
-        conexionState = new Cerrado();
+        if (link != null) {
+            this.setLink(link);
+            conexionState = new Cerrado();
+        }
     }
 
     public ConexionState getConexionState() {
@@ -56,6 +53,11 @@ public final class Conexion {
 
     public void setLink(Link link) {
         this.link = link;
+    }
+
+    public Estado getEstado() {
+        // TODO Auto-generated method stub
+        return this.getEstado();
     }
 
 }

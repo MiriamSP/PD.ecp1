@@ -1,14 +1,15 @@
 package es.upm.miw.pd.state.conection;
 
 public abstract class ConexionState {
-  
 
     private Estado estado;
+
     public String msjExcepcion = "[ERROR] Usupported Operation";
 
     public ConexionState(Estado estado) {
         this.estado = estado;
     }
+
     public void abrir(Conexion conexion) throws UnsupportedOperationException {
         throw new UnsupportedOperationException(msjExcepcion);
     }
@@ -33,14 +34,12 @@ public abstract class ConexionState {
         throw new UnsupportedOperationException(msjExcepcion);
     }
 
-    public  Estado getEstado(){
-    return this.estado;   
+    public Estado getEstado() {
+        return this.estado;
     };
-    
-    public  void setEstado(Estado estado){
-         this.estado = estado;   
-        };
-    
-    
+
+    public void setEstado(Estado estado) {
+        this.estado = estado;
+    };
 
 }

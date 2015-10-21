@@ -6,7 +6,7 @@ public class Parado extends ConexionState{
 
     public Parado() {
         // TODO Auto-generated constructor stub
-        super(estado.PREPARADO);
+        super(Estado.PARADO);
     }
 
     @Override
@@ -21,6 +21,9 @@ public class Parado extends ConexionState{
         conexion.setConexionState(new Preparado());
 
     }
-
+    public Estado getEstado() {
+        // TODO Auto-generated method stub
+        return Estado.PARADO;
+    }
     
 }
